@@ -4,7 +4,9 @@ class AppDelegate
     rootViewController.title = 'runMe'
     rootViewController.view.backgroundColor = UIColor.whiteColor
 
-    navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
+    @workoutcontroller = WorkoutController.alloc.initWithNibName(nil, bundle:nil)
+    navigationController = UINavigationController.alloc.initWithRootViewController(@workoutcontroller)
+
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.rootViewController = navigationController

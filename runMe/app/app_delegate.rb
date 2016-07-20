@@ -7,6 +7,9 @@ class AppDelegate
     @workoutcontroller = WorkoutController.alloc.initWithNibName(nil, bundle:nil)
     navigationController = UINavigationController.alloc.initWithRootViewController(@workoutcontroller)
 
+    # places_list_controller = PlacesListController.alloc.init
+    # navigationController = UINavigationController.alloc.initWithRootViewController(places_list_controller)
+
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.rootViewController = navigationController

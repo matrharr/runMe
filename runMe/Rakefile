@@ -3,6 +3,7 @@ $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
 require 'bubble-wrap'
 require 'bubble-wrap/location'
+require 'bubble-wrap/core'
 
 begin
   require 'bundler'
@@ -15,4 +16,7 @@ Motion::Project::App.setup do |app|
   app.name = 'runMe'
   app.identifier = 'com.example.mattsprofile.mattsnewapp'
   app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true }
+  app.frameworks += ['CoreData', 'CoreLocation']
+  app.info_plist['NSLocationWhenInUseUsageDescription'] = 'Description.'
+  app.info_plist['NSLocationAlwaysUsageDescription'] = 'Description.'
 end
